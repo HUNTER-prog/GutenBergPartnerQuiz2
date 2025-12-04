@@ -32,6 +32,16 @@ public class Main {
 
         executor.shutdown();
 
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Path odysseyPath = Paths.get("C:\\Users\\10022845\\Downloads\\GutenBergPartnerQuiz2\\Odyssey.txt");
+        Path kingPath = Paths.get("C:\\Users\\10022845\\Downloads\\GutenBergPartnerQuiz2\\KingInYellow.txt");
+
+        long start = System.currentTimeMillis();
+
+        expensiveMatrixFromFile(odysseyPath, "Odyssey_processed.txt", 800, 25);
+        expensiveMatrixFromFile(kingPath, "KingInYellow_processed.txt", 800, 25);
+
         long end = System.currentTimeMillis();
         System.out.println("Total time: " + (end - start) + " ms");
     }
